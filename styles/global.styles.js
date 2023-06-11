@@ -5,7 +5,7 @@ export const gStyles = StyleSheet.create({
     flex: 1,
   },
   title: {
-    marginBottom: 32,
+    marginBottom: 33,
     fontFamily: "RobotoMedium",
     fontSize: 30,
     lineHeight: 35,

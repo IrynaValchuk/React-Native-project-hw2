@@ -1,6 +1,7 @@
 import { SafeAreaView } from "react-native";
 import { useFonts } from "expo-font";
-import { RegistrationScreen } from "./screens/RegistrationScreen";
+// import { RegistrationScreen } from "./screens/RegistrationScreen";
+import { LoginScreen } from "./screens/LoginScreen";
 
 import { gStyles } from "./styles/global.styles";
 
@@ -17,7 +18,8 @@ export default function App() {
 
   return (
     <SafeAreaView style={gStyles.container}>
-      <RegistrationScreen />
+      {/* <RegistrationScreen /> */}
+      <LoginScreen />
     </SafeAreaView>
   );
 }
