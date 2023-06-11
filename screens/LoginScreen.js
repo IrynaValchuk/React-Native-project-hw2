@@ -16,21 +16,21 @@ export const LoginScreen = () => {
       <ImageBackground
         source={require("../assets/images/bgImage.jpg")}
         resizeMode="cover"
-        style={styles.bgImage}
+        style={gStyles.bgImage}
       >
-        <View style={styles.formContainer}>
+        <View style={[gStyles.formContainer, styles.formContainer]}>
           <Text style={gStyles.title}>Увійти</Text>
-          <View style={styles.inputWrap}>
+          <View style={gStyles.inputWrap}>
             <Input placeholder="Адреса електронної пошти" />
             <View>
               <Input placeholder="Пароль" secureTextEntry={true} />
-              <TouchableOpacity style={styles.showPasswordBox}>
-                <Text style={styles.text}>Показати</Text>
+              <TouchableOpacity style={gStyles.showPasswordBox}>
+                <Text style={gStyles.text}>Показати</Text>
               </TouchableOpacity>
             </View>
           </View>
           <SubmitButton text="Увійти" />
-          <Text style={styles.text}>Немає акаунту? Зареєструватися</Text>
+          <Text style={gStyles.text}>Немає акаунту? Зареєструватися</Text>
         </View>
       </ImageBackground>
     </View>
@@ -38,35 +38,9 @@ export const LoginScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  bgImage: {
-    flex: 1,
-    justifyContent: "flex-end",
-  },
   formContainer: {
-    position: "relative",
-    height: 489, //змінила
-    alignItems: "center",
-    paddingTop: 32, //змінила
-    paddingBottom: 144, //змінила
-    paddingRight: 16,
-    paddingLeft: 16,
-    backgroundColor: "#fff",
-    borderTopLeftRadius: 25,
-    borderTopRightRadius: 25,
-  },
-  inputWrap: {
-    gap: 16,
-    width: "100%",
-    marginBottom: 43,
-  },
-  showPasswordBox: {
-    position: "absolute",
-    top: 16,
-    right: 16,
-  },
-  text: {
-    fontSize: 16,
-    lineHeight: 19,
-    color: "#1B4371",
+    height: 489,
+    paddingTop: 32,
+    paddingBottom: 144,
   },
 });
